@@ -1,0 +1,59 @@
+﻿<Window x:Class="MHU_First_Run_Assistant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MHU_First_Run_Assistant"
+        mc:Ignorable="d"
+        Title="Welcome to Marylhurst - First Run Assistant" Height="450" Width="525" Icon="pack://application:,,,/Resources/MULogo-display-white.ico">
+    <Grid x:Name="Page1_Data">
+        <TextBlock HorizontalAlignment="Center" Height="17" Margin="10,71,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="502" RenderTransformOrigin="0.494,2.773" Grid.ColumnSpan="2"><Run Text="Welcome the the Marylhurst University Computer Configuration Assistant"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="10,124,0,0" TextWrapping="Wrap" Text="What department are you in?" VerticalAlignment="Top" Width="319"/>
+        <ComboBox Loaded="ComboBox_Loaded" HorizontalAlignment="Left" Height="22" Margin="10,141,0,0" VerticalAlignment="Top" Width="180" Name="Department_Box" SelectionChanged="Combo_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="10,168,0,0" TextWrapping="Wrap" Text="Where is this computer located?"  VerticalAlignment="Top" Width="319" RenderTransformOrigin="0.498,1.492"/>
+        <ComboBox HorizontalAlignment="Left" Height="22" Margin="10,190,0,0" VerticalAlignment="Top" Width="180" SelectedIndex="0" Name="Building_Box" SelectionChanged="Combo_SelectionChanged">
+            <ComboBox.ItemsSource>
+                <CompositeCollection>
+                    <ListBoxItem>Select Building</ListBoxItem>
+                    <ListBoxItem>Art Gym</ListBoxItem>
+                    <ListBoxItem>Aquinas Hall</ListBoxItem>
+                    <ListBoxItem>Baxter Hall</ListBoxItem>
+                    <ListBoxItem>Belluschi Pavilion</ListBoxItem>
+                    <ListBoxItem>BP John</ListBoxItem>
+                    <ListBoxItem>Clark Commons</ListBoxItem>
+                    <ListBoxItem>Davignon Hall</ListBoxItem>
+                    <ListBoxItem>Education Hall</ListBoxItem>
+                    <ListBoxItem>Flavia</ListBoxItem>
+                    <ListBoxItem>Marian Hall</ListBoxItem>
+                    <ListBoxItem>Mayer Art Building</ListBoxItem>
+                    <ListBoxItem>O'Hara Hall</ListBoxItem>
+                    <ListBoxItem>Our Lady of Marylhurst</ListBoxItem>
+                    <ListBoxItem>St. Anne Chapel</ListBoxItem>
+                    <ListBoxItem>St. Catherine Music Building</ListBoxItem>
+                    <ListBoxItem>Shoen Library</ListBoxItem>
+                    <ListBoxItem>Thompson Hall</ListBoxItem>
+                    <ListBoxItem>Villa Maria</ListBoxItem>
+                </CompositeCollection>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+        <Image HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="223" Source="pack://application:,,,/Resources/MULogo-horiz-blue.jpg"/>
+        <Button Content="Continue" HorizontalAlignment="Left" Height="31" Margin="390,379,0,0" VerticalAlignment="Top" Width="114" Click="Continue"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="31" Margin="271,379,0,0" VerticalAlignment="Top" Width="114" Click="Cancel"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="221,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Name="Room_Box" Text="room number" GotFocus="Room_Box_GotFocus"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="10,217,0,0" TextWrapping="Wrap" Text="What kind of computer is this?" VerticalAlignment="Top" Width="180"/>
+        <ComboBox HorizontalAlignment="Left" Height="22" Margin="10,240,0,0" VerticalAlignment="Top" Width="180" SelectedIndex="0" SelectionChanged="Combo_SelectionChanged" Name="Computer_Type">
+            <ComboBox.ItemsSource>
+                <CompositeCollection>
+                    <ListBoxItem>Select Computer Type</ListBoxItem>
+                    <ListBoxItem>Laptop</ListBoxItem>
+                    <ListBoxItem>Desktop</ListBoxItem>
+                </CompositeCollection>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+        
+        <Border Name="DepartmentBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="10,141,0,0" VerticalAlignment="Top" Width="180"/>
+        <Border Name="BuildingBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="10,190,0,0" VerticalAlignment="Top" Width="180"/>
+        <Border Name="TypeBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="10,240,0,0" VerticalAlignment="Top" Width="180"/>
+        <Border Name="RoomBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="22" Margin="221,190,0,0" VerticalAlignment="Top" Width="108"/>
+    </Grid>
+</Window>
